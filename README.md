@@ -1,8 +1,11 @@
 ### Step 1
     - Install composer
     - Install git
-
 ### Step 2
+    ```
+        git clone https://github.com/eba-alemayehu/supply-chain.git
+    ```
+### Step 3
     - Create database `supply_chain`
     - Copy .env.example to .env
     - run 
