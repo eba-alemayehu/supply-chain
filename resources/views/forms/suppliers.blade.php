@@ -1,0 +1,33 @@
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Dashboard') }}
+        </h2>
+    </x-slot>
+
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 bg-white border-b border-gray-200">
+                    <div class="shadow-box" style="padding: 2em 1.5em; width: 420px">
+                        <h2 style="text-align: center; margin-bottom: 1.2em">Add <supplier> </supplier></h2>
+                        <form method="POST" action="/suppliers">
+                            @csrf
+                            <fieldset>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Name" id="name" type="text" name="name" :value="old('name')" required autofocus>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Location" id="location" type="text" name="location" :value="old('location')">
+                                </div>
+
+                                <input class="btn btn-lg btn-success btn-block" type="submit" value="ADD SUPPLIER">
+                            </fieldset>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</x-app-layout>
